@@ -1,10 +1,6 @@
 # react-redux-simple-generator
 react-redux-simple-generator
 
-##Install npm
-``` text
-$ npm install
-```
 
 ##Stack
 
@@ -12,6 +8,11 @@ $ npm install
 - Webpack
 - Redux
 - Babel
+
+##Install npm
+``` text
+$ npm install
+```
 
 ##deployment
 
