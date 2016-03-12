@@ -4,7 +4,6 @@
   "description": "react redux starter",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src",
     "test": "mocha --compilers js:babel-core/register 'src/**/*.test.js' --recursive",
     "test:watch": "npm run test -- --watch",
     "dev": "parallelshell 'npm run start' 'npm run test:watch'"
