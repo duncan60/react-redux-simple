@@ -1,11 +1,11 @@
-import * as types from 'constants/ActionTypes';
+import * as types from '../constants/ActionTypes';
 
 let initialState = {
     say       : 'Hello React Redux Word!',
     githubData: 'none'
 };
 
-const app = (state = initialState, action) => {
+const hello = (state = initialState, action) => {
     switch (action.type) {
         case types.SET_SAY:
             return {
@@ -22,4 +22,4 @@ const app = (state = initialState, action) => {
     };
 };
 
-export default app;
+export default hello;

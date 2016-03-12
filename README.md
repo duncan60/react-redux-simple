@@ -1,5 +1,5 @@
 # react-redux-simple-generator
-react-redux-simple-generator
+Fast to build a React and Redux template
 
 
 ##Stack
@@ -8,6 +8,8 @@ react-redux-simple-generator
 - Webpack
 - Redux
 - Babel
+- mocha
+- chai
 
 ##Install npm
 ``` text
@@ -17,7 +19,7 @@ $ npm install
 ##deployment
 
 ``` text
-$ npm run start
+$ npm run dev
 # open this url in your browser
 # http://localhost:3000/
 ```

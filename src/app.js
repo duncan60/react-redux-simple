@@ -11,7 +11,8 @@ import Root from 'components/containers/Root';
 
 
 const finalCreateStore = compose(
-    applyMiddleware(appMiddleware)
+    applyMiddleware(appMiddleware),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
 
 const store = finalCreateStore(rootReducer);
