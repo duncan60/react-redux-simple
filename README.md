@@ -1,8 +1,8 @@
-# react-redux-simple-generator
+# react-redux-simple
 Fast to build a React and Redux template
 
 
-##Stack
+## Stack
 
 - React.js
 - Webpack
@@ -11,12 +11,12 @@ Fast to build a React and Redux template
 - mocha
 - chai
 
-##Install npm
+## Install npm
 ``` text
 $ npm install
 ```
 
-##deployment
+## deployment
 
 ``` text
 $ npm run dev
