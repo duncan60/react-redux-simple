@@ -1,9 +1,9 @@
 {
-    presets: ["es2015", "stage-0", "react"],
-    plugins: ['transform-decorators-legacy'],
-    env: {
-        development: {
-            presets: ['react-hmre']
+    "presets": ["es2015",  "es2017", "stage-0", "react"],
+    "plugins": [["import", { "libraryName": "antd"}]],
+    "env": {
+        "development": {
+            "presets": ["react-hmre"]
         }
     }
 }
