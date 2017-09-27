@@ -4,8 +4,8 @@ Fast to build a React and Redux template
 
 ## Stack
 
-- React.js
-- Webpack
+- React 16
+- Webpack 3
 - Redux
 - Babel
 - mocha
