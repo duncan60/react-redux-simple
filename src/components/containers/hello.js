@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
@@ -9,7 +10,7 @@ class Hello extends Component {
         super();
     }
     _onClickHandler = () => {
-        this.props.setSay('Rect Redux Cool!');
+        this.props.setSay('React Redux Cool!');
     }
     _onFetchHandler = () => {
         this.props.fetchAPI();

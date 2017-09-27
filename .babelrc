@@ -13,7 +13,6 @@
         "react"
     ],
     "plugins": [
-        ["import", { "libraryName": "antd" }],
         ["transform-object-rest-spread", { "useBuiltIns": true }],
         ["transform-class-properties", { "spec": true }]
     ],
