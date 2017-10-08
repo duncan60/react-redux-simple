@@ -16,14 +16,16 @@ class Hello extends Component {
         this.props.fetchAPI();
     }
     render() {
-        return (
-            <div>
+        return [
+            <div key={1}>
                 {this.props.say}
                 <button
                     type="button"
                     onClick={this._onClickHandler} >
                     Click Me!
                 </button>
+            </div>,
+            <div key={2}>
                 <button
                     type="button"
                     onClick={this._onFetchHandler} >
@@ -32,7 +34,7 @@ class Hello extends Component {
                 github:
                 {this.props.githubData}
             </div>
-        );
+        ];
     };
 };
 
