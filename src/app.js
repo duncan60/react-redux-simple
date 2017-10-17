@@ -9,7 +9,6 @@ import appMiddleware from 'appMiddleware';
 
 import Root from 'components/containers/Root';
 
-
 const finalCreateStore = compose(
     applyMiddleware(appMiddleware),
     window.devToolsExtension ? window.devToolsExtension() : f => f

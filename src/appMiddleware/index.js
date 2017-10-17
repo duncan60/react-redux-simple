@@ -12,8 +12,8 @@ export default function appMiddleware () {
             headers: {
                 'Content-Type': 'application/json'
             },
-            method : fetchAPI.method,
-            body   : JSON.stringify(fetchAPI.body)
+            method: fetchAPI.method,
+            body: JSON.stringify(fetchAPI.body)
         };
         return fetch(fetchAPI.path, fetchSetting)
             .then(response => response.json())

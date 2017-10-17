@@ -39,15 +39,15 @@ class Hello extends Component {
 };
 
 Hello.propTypes = {
-    say       : PropTypes.string.isRequired,
+    say: PropTypes.string.isRequired,
     githubData: PropTypes.string.isRequired,
-    setSay    : PropTypes.func.isRequired,
-    fetchAPI  : PropTypes.func.isRequired
+    setSay: PropTypes.func.isRequired,
+    fetchAPI: PropTypes.func.isRequired
 };
 
 export default connect(
     state => ({
-        say       : state.hello.say,
+        say: state.hello.say,
         githubData: state.hello.githubData
     }),
     dispatch => bindActionCreators({

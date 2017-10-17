@@ -1,7 +1,7 @@
 import * as types from '../constants/ActionTypes';
 
 let initialState = {
-    say       : 'Hello React Redux Word!',
+    say: 'Hello React Redux Word!',
     githubData: 'none'
 };
 

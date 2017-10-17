@@ -23,9 +23,9 @@ export const setSay = (say) => {
 
 export function fetchAPI() {
     return {
-        types   : [fetchSuccessed, fetchFailed],
+        types: [fetchSuccessed, fetchFailed],
         fetchAPI: {
-            path  : 'https://api.github.com',
+            path: 'https://api.github.com',
             method: 'GET'
         }
     };
