@@ -12,12 +12,7 @@
         "type": "git",
         "url": "https://github.com/duncan60/react-redux-simple-generator"
     },
-    "keywords": [
-        "react",
-        "reactjs",
-        "redux",
-        "webpack"
-    ],
+    "keywords": ["react", "reactjs", "redux", "webpack"],
     "author": "Duncan Du",
     "license": "MIT",
     "devDependencies": {
