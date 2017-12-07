@@ -5,7 +5,7 @@ let initialState = {
   githubData: 'none'
 };
 
-const hello = (state = initialState, action) => {
+const helloReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.SET_SAY:
       return {
@@ -22,4 +22,4 @@ const hello = (state = initialState, action) => {
   }
 };
 
-export default hello;
+export default helloReducer;

@@ -1,24 +1,11 @@
 {
     "presets": [
-        ["env", {
-            "modules": false,
-            "useBuiltIns": true,
-            "debug": true,
-            "loose": true,
-            "targets": {
-                "browsers": ["last 2 versions", "safari >= 7"],
-                "node": "current"
-            }
-        }],
-        "react"
+        ["es2015", { "modules": false }], "stage-0", "react"
     ],
     "plugins": [
         ["transform-object-rest-spread", { "useBuiltIns": true }],
-        ["transform-class-properties", { "spec": true }]
-    ],
-    "env": {
-        "development": {
-            "presets": ["react-hmre"]
-        }
-    }
+        ["transform-class-properties", { "spec": true }],
+        "external-helpers",
+        "add-module-exports"
+    ]
 }
