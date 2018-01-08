@@ -42,6 +42,7 @@ export default {
     globals(),
     replace({ 'process.env.NODE_ENV': JSON.stringify('development') }),
     resolve({
+      jsnext: true,
       browser: true,
       main: true,
       module: true,

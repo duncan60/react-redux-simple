@@ -228,14 +228,6 @@ var process = {
   uptime: uptime
 };
 
-var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
-
-
-
-function unwrapExports (x) {
-	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
-}
-
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
 }
@@ -18169,21 +18161,16 @@ function isPlainObject(value) {
     funcToString.call(Ctor) == objectCtorString;
 }
 
-var ponyfill = createCommonjsModule(function (module, exports) {
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports['default'] = symbolObservablePonyfill;
 function symbolObservablePonyfill(root) {
 	var result;
-	var _Symbol = root.Symbol;
+	var Symbol = root.Symbol;
 
-	if (typeof _Symbol === 'function') {
-		if (_Symbol.observable) {
-			result = _Symbol.observable;
+	if (typeof Symbol === 'function') {
+		if (Symbol.observable) {
+			result = Symbol.observable;
 		} else {
-			result = _Symbol('observable');
-			_Symbol.observable = result;
+			result = Symbol('observable');
+			Symbol.observable = result;
 		}
 	} else {
 		result = '@@observable';
@@ -18191,43 +18178,23 @@ function symbolObservablePonyfill(root) {
 
 	return result;
 }
-});
 
-unwrapExports(ponyfill);
-
-var lib = createCommonjsModule(function (module, exports) {
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-
-
-var _ponyfill2 = _interopRequireDefault(ponyfill);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-var root; /* global window */
-
+/* global window */
+var root$2;
 
 if (typeof self !== 'undefined') {
-  root = self;
+  root$2 = self;
 } else if (typeof window !== 'undefined') {
-  root = window;
-} else if (typeof commonjsGlobal !== 'undefined') {
-  root = commonjsGlobal;
+  root$2 = window;
+} else if (typeof global$1 !== 'undefined') {
+  root$2 = global$1;
+} else if (typeof module !== 'undefined') {
+  root$2 = module;
 } else {
-  root = module;
+  root$2 = Function('return this')();
 }
 
-var result = (0, _ponyfill2['default'])(root);
-exports['default'] = result;
-});
-
-unwrapExports(lib);
-
-var symbolObservable = lib;
-
-var symbolObservable_1 = symbolObservable.$$observable;
+var result = symbolObservablePonyfill(root$2);
 
 /**
  * These are private action types reserved by Redux.
@@ -18457,7 +18424,7 @@ var ActionTypes = {
         var unsubscribe = outerSubscribe(observeState);
         return { unsubscribe: unsubscribe };
       }
-    }, _ref[symbolObservable] = function () {
+    }, _ref[result] = function () {
       return this;
     }, _ref;
   }
@@ -18472,7 +18439,7 @@ var ActionTypes = {
     subscribe: subscribe,
     getState: getState,
     replaceReducer: replaceReducer
-  }, _ref2[symbolObservable] = observable, _ref2;
+  }, _ref2[result] = observable, _ref2;
 }
 
 /**
